@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>Visboer H.A. Ring</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(185, 223, 223);
+        }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(54, 34, 34);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            color: aliceblue;
+            border-top: 10px;
+        }
+
+        li a {
+            display: block;
+            color: rgb(202, 138, 138);
+            padding: 12px 20px 15px 25px;
+            text-decoration: none;
+            float: right;
+
+        }
+
+        li a.active {
+            background-color: #a5a053d5;
+            color: rgb(15, 14, 14);
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        .container {
+            display: display-inside;
+            grid-template-columns: auto auto;
+            padding: 10px 0px 10px 0px;
+            height: 100%;
+            max-width: 100%;
+            text-align: center;
+
+        }
+
+        .container>div {
+            background-color: rgb(54, 34, 34);
+            padding: 20px 50px 30px 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: rgba(66, 65, 71, 0.8);
+            margin: 10px 0px 10px 0px;
+            padding: 5px 0px 5px 0px;
+            border-radius: 50px;
+            color: white;
+
+        }
+    </style>
+
+</head>
+
+<body class='body'>
+    <header>
+        <div>
+            <ul>
+                <li><a href="Visboer site H.A Ring.html">Hoofdpagina</a></li>
+                <li><a href="Assortiment.html">Assortiment</a></li>
+                <li><a class="active" href="Contact.html">Contact</a></li>
+                <li><a href="Info.html">Info</a></li>
+                <li><a href="Actie.html">Actie</a></li>
+                <li><a href="Overons.html">Over ons</a></li>
+
+                <button class="btn"><i class="fab fa-twitter-square"></i></button>
+                <button class="btn"><i class="fab fa-instagram"></i></button>
+                <button class="btn"><i class="fab fa-facebook"></i></button>
+                <b>Email: haring@haring.nl</b><br>
+                <b>Tel: 088-5959834</b></u><br>
+            </ul>
+        </div>
+        <div class='plaatjevis'>
+            <img src='https://vishandelnijboer.nl/images/slides/Slide5.JPG' alt='plaatje vis header'
+                style='width: 1500px; height: 300px; padding: 20px 0px 0px 0px; max-width: 100%; margin-top: 20px;'>
+        </div>
+    </header>
+    <div class='container'>
+        <div>
+            <h2 style="text-align: center;">Contact</h2>
+            Mocht u toch nog vragen hebben over uw bestelling, levering of over het
+            product? Dan helpen we u graag.<br> Of
+            heeft u een klacht? Ook dan helpen we u graag.<br>
+            Vul het onderstaande formulier in en nemen zsm contact met u op.<br><br>
+
+            * Verplicht<br><br>
+            <form>
+                <label for="fname">* Voor naam:</label><br>
+                <input type="text" id="fname" name="fname" required><br><br>
+                <label for="lname">Achternaam:</label><br>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">* E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="tel">* Telefoon Nr:</label><br>
+                <input type="tel" id="telnr" name="telnr" required><br><br>
+                <label for="onderwerp">* Onderwerp:</label><br>
+                <select name="onderwerp" id="onderwerp" required>
+                    <option value="bestelling">Bestelling</option>
+                    <option value="vraag">Vraag</option>
+                    <option value="klacht">Klacht</option>
+                </select>
+                <p></p>
+                <br>
+                <label for="bericht">* Bericht</label><br>
+                <textarea id="textarea" name="bericht" rows="10" cols="25" required></textarea><br><br>
+                <input type="submit" value="Verzend">
+            </form>
+
+
+            <script>
+
+                const select = document.querySelector('select')
+                const para = document.querySelector('p')
+
+                select.addEventListener('change', onderwerp)
+
+                function onderwerp() {
+                    const choice = select.value;
+
+                    if (choice === 'bestelling') {
+                        para.textContent = ' Heeft u vragen over uw bestelling? Stel ze gerust, en we nemen zsm contact met u op.'
+                    } else if (choice === 'klacht') {
+                        para.textContent = 'Geef aub aan om welk product het gaat, en wanneer u het gekocht hebt. En wij nemen dan zsm contact met u op.'
+                    } else {
+                        para.textContent = ''
+                    }
+                }
+
+            </script>
+        </div>
+
+        <div class="footer">
+            <footer>
+                <b>Tel: 088-5959834</b></u><br>
+                <b>Email: haring@haring.nl</b><br>
+                <b>Visboer H.A. Ring<br>
+                    Meeuwenlaan 12<br>
+                    9834 NX Meeuwwijk</b><br>
+            </footer>
+</body>
+
+</html>

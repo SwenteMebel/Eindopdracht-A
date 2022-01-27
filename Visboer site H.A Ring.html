@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>Visboer H.A. Ring</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .body {
+
+            background-color: rgb(185, 223, 223);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(54, 34, 34);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            color: aliceblue;
+            border-top: 10px;
+        }
+
+        li a {
+            display: block;
+            color: rgb(202, 138, 138);
+            padding: 12px 20px 15px 25px;
+            text-decoration: none;
+            float: right;
+
+        }
+
+        li a.active {
+            background-color: #a5a053d5;
+            color: rgb(15, 14, 14);
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        .hometext {
+            background-color: rgb(54, 34, 34);
+            text-align: center;
+            padding: 8px 20px 10px 0px;
+            max-width: 100%;
+            color: rgb(236, 236, 236);
+            margin: 0px 2px 0px 2px;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: display-inside;
+            color: white;
+            max-width: 100%;
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        .container>div {
+            background-color: rgb(54, 34, 34);
+            text-align: center;
+            padding-bottom: 20px;
+            border-radius: 10px;
+
+        }
+
+        .footer {
+            text-align: center;
+            background-color: rgb(54, 34, 34);
+            color: white;
+            margin-top: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body class='body'>
+
+    <header class='header'>
+        <div>
+            <ul>
+                <li><a class="active" href="Visboer site H.A Ring.html">Hoofdpagina</a></li>
+                <li><a href="Assortiment.html">Assortiment</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Info.html">Info</a></li>
+                <li><a href="Actie.html">Actie</a></li>
+                <li><a href="Overons.html">Over ons</a></li>
+
+                <button class="btn"><i class="fab fa-twitter-square"></i></button>
+                <button class="btn"><i class="fab fa-instagram"></i></button>
+                <button class="btn"><i class="fab fa-facebook"></i></button>
+                <b>Email: haring@haring.nl</b><br>
+                <b>Tel: 088-5959834</b></u><br>
+            </ul>
+        </div>
+        <div class='plaatjevis'>
+            <img src='https://www.vishandeltel.nl/ewExternalFiles/vishandel-TEL-vispalet.jpg' alt='plaatje vis header'
+                style='width: 1500px; height: 300px; padding: 20px 0px 0px 0px; max-width: 100%; margin-top: 20px;'>
+        </div>
+    </header>
+    <div>
+        <section>
+            <div class="hometext">
+                <h2>Welkom op onze nieuwe website Visboer H.A. Ring.</h2>
+                <h3>Bij deze hopen we dat u makkelijker de weg kunt vinden op onze site.</h3>
+                <h4>Mocht u toch nog vragen hebben dan kunt u gerust terecht bij onze <a href="Contact.html"
+                        style="text-decoration: none; color: rgb(255, 252, 252);">contact</a> pagina.
+                </h4>
+                <article>
+                    <h4>Ook hebben wij elke week nieuwe acties, deze kunt u ook in de gaten houden bij op onze site.
+                        Dit
+                        kunt u
+                        vinden bij het kopje <a href="Actie.html"
+                            style="text-decoration: none; color: rgb(248, 248, 248);">acties</a>.
+                    </h4>
+                    <h4>Het is eventueel ook mogenlijk om u aan te melden voor een wekelijkse nieuwsbrief, zo bent u
+                        altijd
+                        snel op
+                        de hoogte! Onder aan deze pagina kunt u zich aanmelden voor deze nieuwsbrief! </h4>
+
+                    <h4>Wat ook altijd leuk is om te weten waar wij onze vis vandaan halen en wat wij in ons <a
+                            href="Assortiment.html"
+                            style="text-decoration: none; color: rgb(255, 255, 255);">assortiment</a>
+                        hebben.
+                        Dit laten we graag aan onze klanten weten, dit kunt u
+                        vinden onder het kopje <a href="Informatie.html"
+                            style="text-decoration: none; color: rgb(255, 255, 255);">info</a>.</h4>
+                </article>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <div class=" inschrijven">
+            <h4> Hier kunt u zich inschrijven voor onze nieuwsbrief! </h4>
+            <h4> Blijf op de hoogte van alle
+                acties.</h4>
+            <p><b> * is verplicht</b></p>
+            <form action="/action_page.php">
+                <label for="vnaam"><b>Voor naam:</b></label><br>
+                <input type="text" id="voornaam" name="vnaam" value=""><br>
+                <label for="lname"><b>Achternaam:</b></label><br>
+                <input type="text" id="achternaam" name="anaam" value=""><br>
+                <label for="email"><b>* Email:</b></label><br>
+                <input type="email" id="email" name="email" value="" required><br><br>
+                <input type="submit" value="Bevestigen">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <b>Tel: 088-5959834</b></u><br>
+            <b>Email: haring@haring.nl</b><br>
+            <b>Visboer H.A. Ring<br>
+                Meeuwenlaan 12<br>
+                9834 NX Meeuwwijk</b><br>
+        </footer>
+    </div>
+
+</body>
+
+</html>

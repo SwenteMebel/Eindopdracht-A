@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bestellen</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(185, 223, 223);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(54, 34, 34);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            color: aliceblue;
+
+        }
+
+        li a {
+            display: block;
+            color: rgb(202, 138, 138);
+            padding: 12px 20px 15px 25px;
+            text-decoration: none;
+            float: right;
+
+        }
+
+        li a.active {
+            background-color: #a5a053d5;
+            color: rgb(15, 14, 14);
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+
+        .gegevensinvullen {
+
+            display: display-box;
+            padding: 20px 0px 0px 0px;
+            color: white;
+        }
+
+        .gegevensinvullen>div {
+            background-color: rgb(54, 34, 34);
+            padding: 20px 0px 20px 30px;
+            border-bottom: 5px solid #a5a053d5;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+
+
+
+        .bon {
+            background-color: rgb(54, 34, 34);
+            width: 100%;
+            border-bottom: 5px solid #a5a053d5;
+            margin-top: 20px;
+            float: center;
+            padding: 20px 30px 20px 30px;
+            border-radius: 30px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <ul>
+                <li><a href="Visboer site H.A Ring.html">Hoofdpagina</a></li>
+                <li><a class="active" href="Assortiment.html">Assortiment</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Info.html">Info</a></li>
+                <li><a href="Actie.html">Actie</a></li>
+                <li><a href="Overons.html">Over ons</a></li>
+
+                <button class="btn"><i class="fab fa-twitter-square"></i></button>
+                <button class="btn"><i class="fab fa-instagram"></i></button>
+                <button class="btn"><i class="fab fa-facebook"></i></button>
+                <b>Email: haring@haring.nl</b><br>
+                <b>Tel: 088-5959834</b></u><br>
+            </ul>
+        </div>
+        <div class='plaatjevis'>
+            <img src='https://www.vishandeltel.nl/ewExternalFiles/vishandel-TEL-vispalet.jpg' alt='plaatje vis header'
+                style='width: 1500px; height: 300px; padding: 20px 0px 0px 0px; max-width: 100%; margin-top: 20px;'>
+        </div>
+    </header>
+
+
+
+    <div>
+        <table class='bon'>
+            <tr
+                style='padding-top: 12px;  padding-bottom: 12px; text-align: left; background-color:#a5a053d5; color: rgb(155, 120, 120); color: black;'>
+                <td><b><u>Artikel</u></b></td>
+                <th>
+                <td><b><u>Prijs per KG / stuk</u></b></td>
+                <th>
+                <td><b><u>Aantal stuks/gewicht</u></b></td>
+                <th>
+                <td><b><u>Sub totaal</u></b></td>
+            </tr>
+
+            <tr>
+                <td><span id='productVisRollade'></span></td>
+                <th>
+                <td> € <span id='prijsVisRollade'> </span></td>
+                <th>
+                <td><span id='aantalVisRollade'></span></td>
+                <th>
+                <td> € <span id='subTotaalVisRollade'> </span></td>
+            </tr>
+            <tr>
+                <td><span id='productBoterVis'></span></td>
+                <th>
+                <td> € <span id='prijsBoterVis'> </span></td>
+                <th>
+                <td><span id='aantalBoterVis'></span></td>
+                <th>
+                <td> € <span id='subTotaalBoterVis'> </span></td>
+            </tr>
+            <tr>
+                <td><span id='productKibbeling'></span></td>
+                <th>
+                <td>€ <span id='prijsKibbeling'> </span></td>
+                <th>
+                <td><span id='aantalKibbeling'></span></td>
+                <th>
+                <td>€ <span id='subTotaalKibbeling'> </span></td>
+            </tr>
+            <tr>
+                <td><span id='productViskoekjes'></span></td>
+                <th>
+                <td> € <span id='prijsViskoekjes'></span></td>
+                <th>
+                <td><span id='aantalViskoekjes'></span></td>
+                <th>
+                <td> € <span id='subTotaalViskoekjes'></span></td>
+            </tr>
+
+            <tr>
+                <td><span id='productSaus'></span></td>
+                <th>
+                <td>€ <span id='prijsSaus'></span></td>
+                <th>
+                <td><span id='aantalSaus'></span></td>
+                <th>
+                <td>€ <span id='subTotaalSaus'> </span></td>
+            </tr>
+            <tr>
+                <td><span id='productPaling'></span></td>
+                <th>
+                <td>€ <span id='prijsPaling'></span></td>
+                <th>
+                <td><span id='aantalPaling'></span></td>
+                <th>
+                <td>€ <span id='subTotaalPaling'></span></td>
+            </tr>
+            <tr>
+                <td><span id='productMakreel'></span></td>
+                <th>
+                <td>€ <span id='prijsMakreel'></span></td>
+                <th>
+                <td><span id='aantalMakreel'></span></td>
+                <th>
+                <td>€ <span id='subTotaalMakreel'></span></td>
+            </tr>
+            <tr>
+                <td><span id='productScholfilet'></span></td>
+                <th>
+                <td>€ <span id='prijsScholfilet'></span></td>
+                <th>
+                <td><span id='aantalScholfilet'></span></td>
+                <th>
+                <td>€ <span id='subTotaalScholfilet'></span></td>
+            </tr>
+            <tr>
+                <td><span id='productVisfriet'></span></td>
+                <th>
+                <td>€ <span id='prijsVisfriet'></span></td>
+                <th>
+                <td><span id='aantalVisfriet'></span></td>
+                <th>
+                <td>€ <span id='subTotaalVisfriet'></span></td>
+            </tr>
+            <tr>
+                <td><span id='productZalmsnack'></span></td>
+                <th>
+                <td>€ <span id='prijsZalmsnack'></span></td>
+                <th>
+                <td><span id='aantalZalmsnack'></span></td>
+                <th>
+                <td>€ <span id='subTotaalZalmsnack'></span></td>
+            </tr>
+            <tr>
+                <td><span id='productZalmmoot'></span></td>
+                <th>
+                <td>€ <span id='prijsZalmmoot'></span></td>
+                <th>
+                <td><span id='aantalZalmmoot'></span></td>
+                <th>
+                <td>€ <span id='subTotaalZalmmoot'></span></td>
+            </tr>
+            <tr>
+                <td><span id='productDorade'></span></td>
+                <th>
+                <td>€ <span id='prijsDorade'></span></td>
+                <th>
+                <td><span id='aantalDorade'></span></td>
+                <th>
+                <td>€ <span id='subTotaalDorade'></span></td>
+            </tr>
+
+
+            <tr>
+                <td><b>Sub Totaal</b></td>
+                <td> € <span id='subBedrag'> </span></td>
+            </tr>
+            <tr>
+                <td><b>Korting</b></td>
+                <td> € <span id='korting'> </span></td>
+            </tr>
+            <tr>
+                <td><b>Te betalen</b></td>
+                <td> € <span id='totaal'> </span></td>
+            </tr>
+
+        </table>
+
+
+    </div>
+    <div class='gegevensinvullen'>
+        <div>
+
+            <p>* Verplicht</p>
+
+            <label for='voornaam'><b>* Voornaam:</b></label><br>
+            <input type='text' id='voornaam' name='voornaam' required><br><br>
+            <label for='achternaam'><b>Achternaam:</b></label><br>
+            <input type='text' id='achternaam' name='achternaam'><br><br>
+            <label for='email'><b>* Email:</b></label><br>
+            <input type='email' id='email' name='email' required><br><br>
+            <label for='besteldatum'><b>* Bestel datum:</b></label><br>
+            <input type='date' id='besteldatum' name='besteldatum' required><br><br>
+            <label for='telefoonNR'><b>* Telefoon Nummer:</b></label><br>
+            <input type='tel' id='telefoonNR' name='telefoonNR' required><br><br>
+            <label for='bezorgtype'><b>* Maak uw keuze, ophalen of bezorgen:</b></label><br>
+            <input type='checkbox' id='ophalen' name='bezorgtype' value='Ophalen'>
+            <label for='bezorgtype'>Ophalen in
+                de winkel</label><br>
+            <input type='checkbox' id='bezorgen' name='bezorgtype' value='Bezorgen'><label for='bezorgtype'>Laten
+                bezorgen</label><br><br>
+            <label for='opmerking'><b>Opmerking:</b></label> Saus besteld? Geef aan welke saus u wenst.<br>
+            <textarea id="textarea" name="bericht" rows="10" cols="45"></textarea><br><br>
+
+            <input type='button' id='btn1' value='Bestellen'>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        var productInArray = [];
+        var aantallenWeergave, subWeergave, tussenBedrag, kortingBedrag, totaalBedrag1;
+
+        // De producten die binnen moeten komen. Met een test.
+        productInArray = JSON.parse(sessionStorage.getItem('artikelenArrays'));
+        console.log(productInArray[0][0]);
+        console.log(productInArray[0][1]);
+        // de ingevoerde aantallen die binnen komen. Met een test.
+        aantallenWeergave = JSON.parse(sessionStorage.getItem('artikelenWeergave'));
+        console.log(aantallenWeergave.weergaveArtikel1 + ' ' + aantallenWeergave.weergaveArtikel2 + ' ' + aantallenWeergave.weergaveArtikel3);
+
+        // De subbedragen die binnen moeten komen per product. Met een test.
+        subWeergave = JSON.parse(sessionStorage.getItem('artikelenSubtotaal'));
+        console.log(subWeergave.subTotaalArtikel1 + ' ' + subWeergave.subTotaalArtikel2 + ' ' + subWeergave.subTotaalArtikel3)
+
+        // Het subbedrag van de bestelling.
+        tussenBedrag = JSON.parse(sessionStorage.getItem('subBedrag'));
+        console.log(tussenBedrag)
+
+        // De korting van de bestelling.
+        kortingBedrag = JSON.parse(sessionStorage.getItem('persentageKorting'));
+        console.log(kortingBedrag)
+
+        // Het totaal bedrag van de bestelling. 
+        totaalBedrag1 = JSON.parse(sessionStorage.getItem('eindBedrag'));
+        console.log(totaalBedrag1)
+
+        //Visrollade 
+        productVisRollade.innerHTML = productInArray[0][0];
+        prijsVisRollade.innerHTML = productInArray[0][1].toFixed(2);
+        aantalVisRollade.innerHTML = aantallenWeergave.weergaveArtikel1;
+        subTotaalVisRollade.innerHTML = subWeergave.subTotaalArtikel1;
+
+        // BoterVis
+        productBoterVis.innerHTML = productInArray[1][0];
+        prijsBoterVis.innerHTML = productInArray[1][1].toFixed(2);
+        aantalBoterVis.innerHTML = aantallenWeergave.weergaveArtikel2;
+        subTotaalBoterVis.innerHTML = subWeergave.subTotaalArtikel2;
+
+        // Kibbeling
+        productKibbeling.innerHTML = productInArray[2][0];
+        prijsKibbeling.innerHTML = productInArray[2][1].toFixed(2);
+        aantalKibbeling.innerHTML = aantallenWeergave.weergaveArtikel3;
+        subTotaalKibbeling.innerHTML = subWeergave.subTotaalArtikel3;
+
+        //Viskoekjes
+        productViskoekjes.innerHTML = productInArray[3][0];
+        prijsViskoekjes.innerHTML = productInArray[3][1].toFixed(2);
+        aantalViskoekjes.innerHTML = aantallenWeergave.weergaveArtikel4;
+        subTotaalViskoekjes.innerHTML = subWeergave.subTotaalArtikel4;
+
+        //Saus
+        productSaus.innerHTML = productInArray[4][0];
+        prijsSaus.innerHTML = productInArray[4][1].toFixed(2);
+        aantalSaus.innerHTML = aantallenWeergave.weergaveArtikel5;
+        subTotaalSaus.innerHTML = subWeergave.subTotaalArtikel5;
+
+        //Paling
+        productPaling.innerHTML = productInArray[5][0];
+        prijsPaling.innerHTML = productInArray[5][1].toFixed(2);
+        aantalPaling.innerHTML = aantallenWeergave.weergaveArtikel6;
+        subTotaalPaling.innerHTML = subWeergave.subTotaalArtikel6;
+
+        //Makreel
+        productMakreel.innerHTML = productInArray[6][0];
+        prijsMakreel.innerHTML = productInArray[6][1].toFixed(2);
+        aantalMakreel.innerHTML = aantallenWeergave.weergaveArtikel7;
+        subTotaalMakreel.innerHTML = subWeergave.subTotaalArtikel7;
+
+        //Scholfilet
+        productScholfilet.innerHTML = productInArray[7][0];
+        prijsScholfilet.innerHTML = productInArray[7][1].toFixed(2);
+        aantalScholfilet.innerHTML = aantallenWeergave.weergaveArtikel8;
+        subTotaalScholfilet.innerHTML = subWeergave.subTotaalArtikel8;
+
+
+        //Visfriet
+        productVisfriet.innerHTML = productInArray[8][0];
+        prijsVisfriet.innerHTML = productInArray[8][1].toFixed(2);
+        aantalVisfriet.innerHTML = aantallenWeergave.weergaveArtikel9;
+        subTotaalVisfriet.innerHTML = subWeergave.subTotaalArtikel9;
+
+        //Zalm snack
+        productZalmsnack.innerHTML = productInArray[9][0];
+        prijsZalmsnack.innerHTML = productInArray[9][1].toFixed(2);
+        aantalZalmsnack.innerHTML = aantallenWeergave.weergaveArtikel10;
+        subTotaalZalmsnack.innerHTML = subWeergave.subTotaalArtikel10;
+
+        //Verse Zalm moot
+        productZalmmoot.innerHTML = productInArray[10][0];
+        prijsZalmmoot.innerHTML = productInArray[10][1].toFixed(2);
+        aantalZalmmoot.innerHTML = aantallenWeergave.weergaveArtikel11;
+        subTotaalZalmmoot.innerHTML = subWeergave.subTotaalArtikel11;
+
+        //Verse Zalm moot
+        productDorade.innerHTML = productInArray[11][0];
+        prijsDorade.innerHTML = productInArray[11][1].toFixed(2);
+        aantalDorade.innerHTML = aantallenWeergave.weergaveArtikel12;
+        subTotaalDorade.innerHTML = subWeergave.subTotaalArtikel12;
+
+        subBedrag.innerHTML = tussenBedrag;
+        korting.innerHTML = kortingBedrag.toFixed(2);
+        totaal.innerHTML = totaalBedrag1.toFixed(2);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

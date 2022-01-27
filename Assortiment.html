@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Visboer H.A. Ring</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .header {
+            text-align: center;
+            background-color: rgba(66, 65, 71, 0.8);
+            margin: 20px 80px 10px 80px;
+            padding: 5px 20px 5px 20px;
+            border-radius: 10px;
+            border-style: groove;
+            border-color: gold;
+            color: white;
+        }
+
+        .body {
+            background-color: rgb(185, 223, 223);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(54, 34, 34);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            color: aliceblue;
+
+        }
+
+        li a {
+            display: block;
+            color: rgb(202, 138, 138);
+            padding: 12px 20px 15px 25px;
+            text-decoration: none;
+            float: right;
+
+        }
+
+        li a.active {
+            background-color: #a5a053d5;
+            color: rgb(15, 14, 14);
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        .container {
+
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 20px;
+            padding: 10px 0px 0px 0px;
+            height: 100%;
+            color: white;
+
+
+        }
+
+        .container>div {
+            background-color: rgb(54, 34, 34);
+            padding: 0px 0px 20px 20px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: rgb(54, 34, 34);
+            margin: 10px 0px 10px 0px;
+            padding: 5px 20px 5px 20px;
+            border-radius: 5px;
+            color: white;
+            max-width: 100%;
+        }
+    </style>
+
+</head>
+
+<body class='body'>
+    <header>
+        <div>
+            <ul>
+                <li><a href="Visboer site H.A Ring.html">Hoofdpagina</a></li>
+                <li><a class="active" href="Assortiment.html">Assortiment</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Info.html">Info</a></li>
+                <li><a href="Actie.html">Actie</a></li>
+                <li><a href="Overons.html">Over ons</a></li>
+
+                <button class="btn"><i class="fab fa-twitter-square"></i></button>
+                <button class="btn"><i class="fab fa-instagram"></i></button>
+                <button class="btn"><i class="fab fa-facebook"></i></button>
+                <b>Email: haring@haring.nl</b><br>
+                <b>Tel: 088-5959834</b></u><br>
+            </ul>
+        </div>
+        <div class='plaatjevis'>
+            <img src='https://vishandelnijboer.nl/images/slides/Slide3.JPG' alt='plaatje vis header'
+                style='width: 1500px; height: 300px; padding: 20px 0px 0px 0px; max-width: 100%; margin-top: 20px;'>
+        </div>
+    </header>
+
+
+    <div class='container'>
+        <div>
+            <h3>Ons assortiment.</h3>
+            Visrollade per KG is € <span id='visRolladePrijs'></span><br>
+            Botervis per KG is € <span id='boterVisPrijs'></span><br>
+            Kibbeling 500GR is € <span id='kibbelingPrijs'></span><br>
+            Viskoekjes per stuk is € <span id='visKoekjesPrijs'></span><br>
+            Bakje saus is per stuk € <span id='sausPrijs'></span><br>
+            Paling per KG is € <span id='palingPrijs'></span><br>
+            Makreel per KG is € <span id='makreelPrijs'></span><br>
+            Scholfliet per KG is € <span id='scholfiletPrijs'></span><br>
+            Vis Friet 250gr is € <span id='visFrietPrijs'></span><br>
+            Zalm snack per stuk is € <span id='zalmSnackPrijs'></span><br>
+            Verse zalmmoot per KG is € <span id='zalmmootPrijs'></span><br>
+            Dorade per KG is € <span id='doradePrijs'></span>
+            <br>
+            <br>
+            <h4>Opmerking saus</h4>
+            De saus kunt u verkerijgen in, knoflook, ravigotte & cocktail saus.
+        </div>
+
+
+        <div>
+            <h3>Bestel hier</h3>
+            <h5>BIJ EEN BEDRAG VAN €50, KRIJGT U 5% KORTING!</h5>
+            <label>Visrollade :</label> <br>
+            <input type="number" step="0.100" min="0" max="3" placeholder="x.xxx" id="inputVisrollade">
+            (voer aantal KG in) <br>
+            <label>Botervis :</label><br>
+            <input type="number" step="0.100" min="0" max="3" placeholder="x.xxx" id="inputBotervis">
+            (voer aantal KG in) <br>
+            <label>Paling:</label> <br>
+            <input type="number" step="0.100" min="0" max="3" placeholder="x.xxx" id="inputPaling">
+            (voer
+            aantal KG in)<br>
+            <label>Makreel :</label><br>
+            <input type="number" step="0.100" min="0" max="3" placeholder="x.xxx" id="inputMakreel">(voer aantal KG
+            in)<br>
+            <label>Scholfilet :</label><br>
+            <input type="number" step="0.100" min="0" max="3" placeholder="x.xxx" id="inputScholfilet">
+            (voer aantal KG in) <br>
+            <label>Verse zalmmoot :</label><br>
+            <input type="number" min="0" placeholder="x.xxx" id="inputVerseZalmmoot">(voer aantal KG in)<br>
+            <label>Dorade :</label><br>
+            <input type="number" min="0" placeholder="x.xxx" id="inputDorade">(voer aantal KG in)<br>
+            <label>Kibbeling :</label><br>
+            <input type="number" min="0" placeholder="x.xxx" id="inputKibbeling"><br>
+            <label>Viskoekje :</label><br>
+            <input type="number" min="0" placeholder="x.xxx" id="inputVisKoekje"><br>
+            <label>Saus :</label><br>
+            <input type="number" min="0" placeholder="x.xxx" id="inputSaus"><br>
+            <label>Vis friet :</label><br>
+            <input type="number" min="0" placeholder="x.xxx" id="inputVisFriet"><br>
+            <label>Zalm snack :</label><br>
+            <input type="number" min="0" placeholder="x.xxx" id="inputZalmSnack"><br><br><br>
+
+
+
+            <input type='button' id='btn1' value='Bekijk bestelling' onclick='bekijkrekening()'><br>
+        </div>
+
+        <div>
+            <h3>Bekijk hier uw bestelling</h3>
+            Uw bestelde Visrollade : <span id='artikel1'></span><br>
+            Uw bestelde Botervis : <span id='artikel2'></span></br>
+            Uw bestelde Paling : <span id='artikel6'></span></br>
+            Uw bestelde Makreel : <span id='artikel7'></span></br>
+            Uw bestelde Scholfilet : <span id='artikel8'></span></br>
+            Uw bestelde Kibbeling : <span id='artikel3'></span></br>
+            Uw bestelde Viskoekjes : <span id='artikel4'></span></br>
+            Uw bestelde Vis friet: <span id='artikel9'></span><br>
+            Uw Bestelde Saus : <span id='artikel5'></span></br>
+            Uw bestelde Zalm snack: <span id='artikel10'></span><br>
+            Uw bestelde Zalmmoot: <span id='artikel11'></span><br>
+            Uw bestelde Dorade: <span id='artikel12'></span><br>
+            <br>
+            Uw bedrag € <span id='prijs'></span></br>
+            Uw korting is € <span id='kortingBedrag'></span><br>
+            Uw totaal bedrag € <span id='eindBedrag'></span>
+            <br>
+            <br>
+
+            <input type='button' value='Bestellen' id='btn2' onclick='bestelpagina()'>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+        var productArray = [
+            ['VisRollade', 27.50],
+            ['BoterVis', 29.50],
+            ['Kibbeling', 8.75],
+            ['Viskoekjes', 1.25],
+            ['Knoflook, Ravigotte of cocktail saus', 0.60],
+            ['Paling', 19.50],
+            ['Makreel', 7.00],
+            ['Scholfilet', 29.50],
+            ['Vis Friet 250gr', 3.50],
+            ['Zalm Snack', 3.95],
+            ['Verse zalmmoot', 32.50],
+            ['Dorade', 11.43],
+        ];
+
+        visRolladePrijs.innerHTML = (productArray[0][1]).toFixed(2);
+        boterVisPrijs.innerHTML = (productArray[1][1]).toFixed(2);
+        kibbelingPrijs.innerHTML = (productArray[2][1]).toFixed(2);
+        visKoekjesPrijs.innerHTML = (productArray[3][1]).toFixed(2);
+        sausPrijs.innerHTML = (productArray[4][1]).toFixed(2);
+        palingPrijs.innerHTML = (productArray[5][1]).toFixed(2);
+        makreelPrijs.innerHTML = (productArray[6][1]).toFixed(2);
+        scholfiletPrijs.innerHTML = (productArray[7][1]).toFixed(2);
+        visFrietPrijs.innerHTML = (productArray[8][1]).toFixed(2);
+        zalmSnackPrijs.innerHTML = (productArray[9][1]).toFixed(2);
+        zalmmootPrijs.innerHTML = (productArray[10][1]).toFixed(2);
+        doradePrijs.innerHTML = (productArray[11][1]).toFixed(2);
+
+
+
+        function bekijkrekening() {
+
+
+            var productArray = [
+                ['Vis rollade', 27.50], //0
+                ['Boter vis', 29.50], //1
+                ['Kibbeling ', 8.75], //2
+                ['Viskoekjes', 1.25], //3
+                ['Knoflook, Ravigotte of cocktail saus', 0.60], //4
+                ['Paling', 19.50], //5
+                ['Makreel', 7.00], //6
+                ['Scholfilet', 29.50], // 7
+                ['Vis Friet 250gr', 3.50], //8
+                ['Zalm Snack', 3.95], // 9
+                ['Verse zalmmoot', 32.50], //10
+                ['Dorade', 11.43],//11
+            ];
+
+            //HTML stuurt de invoer naar Javascript.
+            var visRollade = document.getElementById("inputVisrollade").value;
+            var boterVis = document.getElementById("inputBotervis").value;
+            var kibbeling = document.getElementById("inputKibbeling").value;
+            var visKoekjes = document.getElementById("inputVisKoekje").value;
+            var saus1 = document.getElementById("inputSaus").value;
+            var paling = document.getElementById("inputPaling").value;
+            var makreel = document.getElementById("inputMakreel").value;
+            var scholfilet = document.getElementById("inputScholfilet").value;
+            var visFriet = document.getElementById("inputVisFriet").value;
+            var zalmSnack = document.getElementById("inputZalmSnack").value;
+            var verseZalmmoot = document.getElementById("inputVerseZalmmoot").value;
+            var dorade = document.getElementById("inputDorade").value;
+
+            // weergaven in volgende pagina aantal bestelde stuks.
+            var aantalWeergave = { weergaveArtikel1: visRollade, weergaveArtikel2: boterVis, weergaveArtikel3: kibbeling, weergaveArtikel4: visKoekjes, weergaveArtikel5: saus1, weergaveArtikel6: paling, weergaveArtikel7: makreel, weergaveArtikel8: scholfilet, weergaveArtikel9: visFriet, weergaveArtikel10: zalmSnack, weergaveArtikel11: verseZalmmoot, weergaveArtikel12: dorade };
+
+
+            //hier stuurt Javascript het terug naar HTML
+            artikel1.innerHTML = visRollade;
+            artikel2.innerHTML = boterVis;
+            artikel3.innerHTML = kibbeling;
+            artikel4.innerHTML = visKoekjes;
+            artikel5.innerHTML = saus1;
+            artikel6.innerHTML = paling;
+            artikel7.innerHTML = makreel;
+            artikel8.innerHTML = scholfilet;
+            artikel9.innerHTML = visFriet;
+            artikel10.innerHTML = zalmSnack;
+            artikel11.innerHTML = verseZalmmoot;
+            artikel12.innerHTML = dorade;
+
+            // bereken de aantallen * prijs
+            var subtotaalVisRollade = (visRollade * productArray[0][1]).toFixed(2);
+            var subtotaalBotervis = (boterVis * productArray[1][1]).toFixed(2);
+            var subtotaalKibbeling = (kibbeling * productArray[2][1]).toFixed(2);
+            var subtotaalVisKoekjes = (visKoekjes * productArray[3][1]).toFixed(2);
+            var subtotaalSaus = (saus1 * productArray[4][1]).toFixed(2);
+            var subtotaalPaling = (paling * productArray[5][1]).toFixed(2);
+            var subtotaalMakreel = (makreel * productArray[6][1]).toFixed(2);
+            var subtotaalScholfilet = (scholfilet * productArray[7][1]).toFixed(2);
+            var subtotaalVisFriet = (visFriet * productArray[8][1]).toFixed(2);
+            var subtotaalZalmSnack = (zalmSnack * productArray[9][1]).toFixed(2);
+            var subtotaalVerseZalmmoot = (verseZalmmoot * productArray[10][1]).toFixed(2);
+            var subtotaalDorade = (dorade * productArray[11][1]).toFixed(2);
+
+            console.log(subtotaalVisRollade)
+
+            // weergave subtotaal per bestelde artikel in volgende pagina.
+            var subTotaalweergave = { subTotaalArtikel1: subtotaalVisRollade, subTotaalArtikel2: subtotaalBotervis, subTotaalArtikel3: subtotaalKibbeling, subTotaalArtikel4: subtotaalVisKoekjes, subTotaalArtikel5: subtotaalSaus, subTotaalArtikel6: subtotaalPaling, subTotaalArtikel7: subtotaalMakreel, subTotaalArtikel8: subtotaalScholfilet, subTotaalArtikel9: subtotaalVisFriet, subTotaalArtikel10: subtotaalZalmSnack, subTotaalArtikel11: subtotaalVerseZalmmoot, subTotaalArtikel12: subtotaalDorade };
+
+
+
+            //bedrag van de bestelling.
+            var bedrag = (parseFloat(subtotaalVisRollade) + parseFloat(subtotaalBotervis) + parseFloat(subtotaalKibbeling) + parseFloat(subtotaalVisKoekjes) + parseFloat(subtotaalSaus) + parseFloat(subtotaalPaling) + parseFloat(subtotaalMakreel) + parseFloat(subtotaalScholfilet) + parseFloat(subtotaalVisFriet) + parseFloat(subtotaalZalmSnack) + parseFloat(subtotaalVerseZalmmoot) + parseFloat(subtotaalDorade)).toFixed(2);
+
+            prijs.innerHTML = bedrag;
+
+            // totaal bedrag met 5% korting bij een bestelling van boven de €50,-
+            var kortingBij = 50;
+            var korting = 0;
+
+            if (bedrag >= kortingBij) {
+                korting = bedrag / 100 * 5;
+            }
+
+            kortingBedrag.innerHTML = korting.toFixed(2);
+
+            // totaal bedrag!
+
+            var totaalBedrag = bedrag - korting.toFixed(2);
+
+            eindBedrag.innerHTML = totaalBedrag.toFixed(2);
+
+
+            sessionStorage.setItem('artikelenArrays', JSON.stringify(productArray));
+            sessionStorage.setItem('artikelenWeergave', JSON.stringify(aantalWeergave));
+            sessionStorage.setItem('artikelenSubtotaal', JSON.stringify(subTotaalweergave));
+            sessionStorage.setItem('subBedrag', JSON.stringify(bedrag));
+            sessionStorage.setItem('persentageKorting', JSON.stringify(korting));
+            sessionStorage.setItem('eindBedrag', JSON.stringify(totaalBedrag));
+        }
+
+        function bestelpagina() {
+
+            location.href = 'BonPagina.html'
+
+        }
+
+    </script>
+    <div class="footer">
+        <footer>
+            <b>Tel: 088-5959834</b></u><br>
+            <b>Email: haring@haring.nl</b><br>
+            <b>Visboer H.A. Ring<br>
+                Meeuwenlaan 12<br>
+                9834 NX Meeuwwijk</b><br>
+        </footer>
+
+</body>
+
+</html>
